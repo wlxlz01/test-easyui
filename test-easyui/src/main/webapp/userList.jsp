@@ -82,8 +82,6 @@
 var url;
 
 function newUser() {
-	alert()
-	alert($('#dg').datagrid('getData').total);
 	$('#dlg').dialog('open').dialog('setTitle', 'New User');
 	$('#fm').form('clear');
 	url = 'user/add';
