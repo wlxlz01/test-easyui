@@ -35,7 +35,7 @@
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.easyui.js"></script>
 </head>
-<body>11
+<body>112
 
 	<table id="dg" title="My Users" class="easyui-datagrid" style="width: 550px; height: 250px"
 		url="user/list" toolbar="#toolbar" rownumbers="true" fitColumns="true" singleSelect="true">
