@@ -4,196 +4,188 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/easyui/themes/default/easyui.css">
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/easyui/themes/icon.css">
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/easyui/themes/icon.css">
 <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css">
 <style type="text/css">
-.products{
-	overflow:auto;
-	height:100%;
-	background:#fafafa;
+.products {
+	overflow: auto;
+	height: 100%;
+	background: #fafafa;
 }
-.products ul{
-	list-style:none;
-	margin:0;
-	padding:0px;
+
+.products ul {
+	list-style: none;
+	margin: 0;
+	padding: 0px;
 }
-.products li{
-	display:inline;
-	float:left;
-	margin:10px;
+
+.products li {
+	display: inline;
+	float: left;
+	margin: 10px;
 }
-.item{
-	display:block;
-	text-decoration:none;
+
+.item {
+	display: block;
+	text-decoration: none;
 }
-.item img{
-	border:1px solid #333;
+
+.item img {
+	border: 1px solid #333;
 }
-.item p{
-	margin:0;
-	font-weight:bold;
-	text-align:center;
-	color:#c3c3c3;
+
+.item p {
+	margin: 0;
+	font-weight: bold;
+	text-align: center;
+	color: #c3c3c3;
 }
-.cart{
-	float:right;
-	position:relative;
-	width:260px;
-	height:100%;
-	background:#ccc;
-	padding:0px 10px;
+
+.cart {
+	float: right;
+	position: relative;
+	width: 260px;
+	height: 100%;
+	background: #ccc;
+	padding: 0px 10px;
 }
-.ctitle{
-	text-align:center;
-	color:#555;
-	font-size:18px;
-	padding:10px;
+
+.ctitle {
+	text-align: center;
+	color: #555;
+	font-size: 18px;
+	padding: 10px;
 }
 </style>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.easyui.js"></script>
 </head>
 <body>
-<div class="easyui-panel" fit="true" border="false" style="height:100%;overflow:hidden">
-	<div class="cart">
-		<div class="ctitle">Shopping Cart</div>
-		<div style="background:#fff">
-		<table id="cartcontent" fitColumns="true" style="width1:300px;height:auto;">
-			<thead>
-				<tr>
-					<th field="name" width=140>Name</th>
-					<th field="quantity" width=60 align="right">Quantity</th>
-					<th field="price" width=60 align="right">Price</th>
-				</tr>
-			</thead>
-		</table>
+	<div class="easyui-panel" fit="true" border="false" style="height: 100%; overflow: hidden">
+		<div class="cart">
+			<div class="ctitle">Shopping Cart</div>
+			<div style="background: #fff">
+				<table id="cartcontent" fitColumns="true" style="width1: 300px; height: auto;">
+					<thead>
+						<tr>
+							<th field="name" width=140>Name</th>
+							<th field="quantity" width=60 align="right">Quantity</th>
+							<th field="price" width=60 align="right">Price</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+			<div class="ctitle" style="position: absolute; bottom: 10px">Drop here to add to cart</div>
 		</div>
-		<div class="ctitle" style="position:absolute;bottom:10px">Drop here to add to cart</div>
+		<div class="products">
+			<ul class="products">
+				<li><a href="#" class="item"> <img src="images/shirt1.gif" />
+						<div>
+							<p>Balloon</p>
+							<p>Price:$25</p>
+						</div>
+				</a></li>
+				<li><a href="#" class="item"> <img src="images/shirt2.gif" />
+						<div>
+							<p>Feeling</p>
+							<p>Price:$25</p>
+						</div>
+				</a></li>
+				<li><a href="#" class="item"> <img src="images/shirt3.gif" />
+						<div>
+							<p>Elephant</p>
+							<p>Price:$25</p>
+						</div>
+				</a></li>
+				<li><a href="#" class="item"> <img src="images/shirt4.gif" />
+						<div>
+							<p>Stamps</p>
+							<p>Price:$25</p>
+						</div>
+				</a></li>
+				<li><a href="#" class="item"> <img src="images/shirt5.gif" />
+						<div>
+							<p>Monogram</p>
+							<p>Price:$25</p>
+						</div>
+				</a></li>
+				<li><a href="#" class="item"> <img src="images/shirt6.gif" />
+						<div>
+							<p>Rolling</p>
+							<p>Price:$25</p>
+						</div>
+				</a></li>
+			</ul>
+		</div>
 	</div>
-	<div class="products">
-		<ul>
-			<li>
-				<a href="#" class="item">
-					<img src="images/shirt1.gif"/>
-					<div>
-						<p>Balloon</p>
-						<p>Price:$25</p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="item">
-					<img src="images/shirt2.gif"/>
-					<div>
-						<p>Feeling</p>
-						<p>Price:$25</p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="item">
-					<img src="images/shirt3.gif"/>
-					<div>
-						<p>Elephant</p>
-						<p>Price:$25</p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="item">
-					<img src="images/shirt4.gif"/>
-					<div>
-						<p>Stamps</p>
-						<p>Price:$25</p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="item">
-					<img src="images/shirt5.gif"/>
-					<div>
-						<p>Monogram</p>
-						<p>Price:$25</p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="item">
-					<img src="images/shirt6.gif"/>
-					<div>
-						<p>Rolling</p>
-						<p>Price:$25</p>
-					</div>
-				</a>
-			</li>
-		</ul>
-	</div>
-</div>
 
 
 </body>
 <script type="text/javascript">
-$(function(){
-	$('#cartcontent').datagrid({
-		singleSelect:true,
-		showFooter:true
-	});
-	$('.item').draggable({
-		revert:true,
-		proxy:'clone',
-		onStartDrag:function(){
-			$(this).draggable('options').cursor = 'not-allowed';
-			$(this).draggable('proxy').css('z-index',10);
-		},
-		onStopDrag:function(){
-			$(this).draggable('options').cursor='move';
-		}
-	});
-	$('.cart').droppable({
-		onDragEnter:function(e,source){
-			$(source).draggable('options').cursor='auto';
-		},
-		onDragLeave:function(e,source){
-			$(source).draggable('options').cursor='not-allowed';
-		},
-		onDrop:function(e,source){
-			var name = $(source).find('p:eq(0)').html();
-			var price = $(source).find('p:eq(1)').html();
-			addProduct(name, parseFloat(price.split('$')[1]));
-		}
-	});
-});
-
-function addProduct(name,price){
-	var dg = $('#cartcontent');
-	var data = dg.datagrid('getData');
-	alert(data.total);
-	function add(){
-		for(var i=0; i<data.total; i++){
-			var row = data.rows[i];
-			if (row.name == name){
-				row.quantity += 1;
-				return;
-			}
-		}
-		data.total += 1;
-		data.rows.push({
-			name:name,
-			quantity:1,
-			price:price
+	$(function() {
+		$('#cartcontent').datagrid({
+			singleSelect : true,
+			showFooter : true
 		});
-	}
-	add();
-	dg.datagrid('loadData', data);
-	var cost = 0;
-	var rows = dg.datagrid('getRows');
-	for(var i=0; i<rows.length; i++){
-		cost += rows[i].price*rows[i].quantity;
-	}
-	dg.datagrid('reloadFooter', [{name:'Total',price:cost}]);
-}
+		$('.item').draggable({
+			revert : true,
+			proxy : 'clone',
+			onStartDrag : function() {
+				$(this).draggable('options').cursor = 'not-allowed';
+				$(this).draggable('proxy').css('z-index', 10);
+			},
+			onStopDrag : function() {
+				$(this).draggable('options').cursor = 'move';
+			}
+		});
+		$('.cart').droppable({
+			onDragEnter : function(e, source) {
+				$(source).draggable('options').cursor = 'auto';
+			},
+			onDragLeave : function(e, source) {
+				$(source).draggable('options').cursor = 'not-allowed';
+			},
+			onDrop : function(e, source) {
+				var name = $(source).find('p:eq(0)').html();
+				var price = $(source).find('p:eq(1)').html();
+				addProduct(name, parseFloat(price.split('$')[1]));
+			}
+		});
+	});
 
-
+	function addProduct(name, price) {
+		var dg = $('#cartcontent');
+		var data = dg.datagrid('getData');
+		alert(data.total);
+		function add() {
+			for ( var i = 0; i < data.total; i++) {
+				var row = data.rows[i];
+				if (row.name == name) {
+					row.quantity += 1;
+					return;
+				}
+			}
+			data.total += 1;
+			data.rows.push({
+				name : name,
+				quantity : 1,
+				price : price
+			});
+		}
+		add();
+		dg.datagrid('loadData', data);
+		var cost = 0;
+		var rows = dg.datagrid('getRows');
+		for ( var i = 0; i < rows.length; i++) {
+			cost += rows[i].price * rows[i].quantity;
+		}
+		dg.datagrid('reloadFooter', [ {
+			name : 'Total',
+			price : cost
+		} ]);
+	}
 </script>
 </html>
