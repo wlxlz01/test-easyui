@@ -1,6 +1,8 @@
 package com.test.easyui.action;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,6 +23,17 @@ public class UserAction {
 	@RequestMapping("list")
 	public List<User> list() {
 		return userDao.list(User.class);
+	}
+	
+	@ResponseBody
+	@RequestMapping("list2")
+	public Map<String, Object> list2(User user,int page, int rows) {
+		int total = userDao.total(User.class);
+		List<User> users = userDao.list2(User.class, (page - 1) * rows, rows);
+		Map<String, Object> m = new HashMap<String, Object>();
+		m.put("total", total);
+		m.put("rows", users);
+		return m;
 	}
 	
 	@ResponseBody
